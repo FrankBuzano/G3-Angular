@@ -1,0 +1,32 @@
+@switch (state()) {
+  @case ('loading') {
+    <div class="state-container">
+      <app-loading-spinner />
+      <p>Cargando...</p>
+    </div>
+  }
+  @case ('not-found') {
+    <div class="state-container">
+      <span class="state-icon">🔍</span>
+      <p>Ciudad no encontrada. Verifica el nombre e intenta de nuevo.</p>
+    </div>
+  }
+  @case ('network') {
+    <div class="state-container">
+      <span class="state-icon">📡</span>
+      <p>Sin conexión a Internet. Verifica tu red e intenta de nuevo.</p>
+    </div>
+  }
+  @case ('error') {
+    <div class="state-container">
+      <span class="state-icon">⚠️</span>
+      <p>Ocurrió un error al obtener el clima. Intenta de nuevo.</p>
+    </div>
+  }
+  @case ('idle') {
+    <div class="state-container">
+      <span class="state-icon">🌤️</span>
+      <p>Busca una ciudad para ver el clima.</p>
+    </div>
+  }
+}
