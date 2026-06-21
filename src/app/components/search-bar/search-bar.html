@@ -1,0 +1,17 @@
+<form class="search-form" (submit)="$event.preventDefault(); onSearch()">
+  <input
+    type="text"
+    class="search-input"
+    placeholder="Buscar ciudad..."
+    [disabled]="disabled()"
+    [value]="inputValue()"
+    (input)="onInput($event)"
+  />
+  <button
+    type="submit"
+    class="search-btn"
+    [disabled]="disabled() || !inputValue().trim()"
+  >
+    Buscar
+  </button>
+</form>

@@ -1,0 +1,14 @@
+<div class="history">
+  <h3 class="history-title">Búsquedas recientes</h3>
+  @if (cities().length === 0) {
+    <p class="history-empty">No hay búsquedas recientes.</p>
+  } @else {
+    <ul class="history-items">
+      @for (city of cities(); track city) {
+        <li>
+          <app-history-item [city]="city" (select)="select.emit($event)" />
+        </li>
+      }
+    </ul>
+  }
+</div>

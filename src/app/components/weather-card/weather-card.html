@@ -1,0 +1,39 @@
+<div class="card">
+  @if (stale()) {
+    <div class="badge badge-warning">No se pudo actualizar</div>
+  }
+  @if (updating()) {
+    <div class="badge badge-updating">Actualizando...</div>
+  }
+
+  <h2 class="city-name">{{ weather().name }}</h2>
+
+  <div class="main-weather">
+    <img
+      [src]="'https://openweathermap.org/img/wn/' + weather().weather[0].icon + '@2x.png'"
+      [alt]="weather().weather[0].description"
+      class="weather-icon"
+    />
+    <span class="temperature">{{ weather().main.temp.toFixed(0) }}°C</span>
+  </div>
+
+  <p class="description">{{ weather().weather[0].description }}</p>
+
+  <div class="details">
+    <app-weather-detail
+      icon="💧"
+      label="Humedad"
+      [value]="weather().main.humidity + '%'"
+    />
+    <app-weather-detail
+      icon="💨"
+      label="Viento"
+      [value]="weather().wind.speed.toFixed(1) + ' m/s'"
+    />
+    <app-weather-detail
+      icon="🌡️"
+      label="Sensación"
+      [value]="weather().main.feels_like.toFixed(0) + '°C'"
+    />
+  </div>
+</div>
