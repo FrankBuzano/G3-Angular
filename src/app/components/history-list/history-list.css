@@ -2,6 +2,7 @@
   background: var(--color-surface);
   border-radius: var(--radius-lg);
   padding: var(--space-lg);
+  container: history / inline-size;
 }
 
 .history-title {
@@ -14,12 +15,18 @@
 
 .history-items {
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-sm);
 }
 
 .history-empty {
   color: var(--color-text-muted);
   font-size: 0.875rem;
+}
+
+@container history (width >= 28rem) {
+  .history-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
