@@ -133,11 +133,10 @@ Cada componente declara sus propias dependencias en `imports: []`, sin necesidad
 
 | # | Estado | Archivo |
 |---|---|---|
-| 1 | Ciudad por defecto al cargar | `docs/capturas/01-default.png` |
-| 2 | Búsqueda exitosa | `docs/capturas/02-exitosa.png` |
-| 3 | Estado de carga | `docs/capturas/03-loading.png` |
-| 4 | Ciudad inexistente (404) | `docs/capturas/04-not-found.png` |
-| 5 | Vista móvil | `docs/capturas/05-mobile.png` |
+| 1 | Ciudad por defecto al cargar | ![Vista default](docs/capturas/default.png) |
+| 2 | Búsqueda exitosa | ![Busqueda exitosa](docs/capturas/exitosa.png)  |
+| 3 | Ciudad inexistente (404) |![No encontrado](docs/capturas/not-found.png) |
+| 4 | Vista móvil | ![Vista mobil](docs/capturas/mobile.png)  |
 
 ---
 
@@ -168,3 +167,5 @@ src/app/
 npm start          # Servidor de desarrollo (http://localhost:4200)
 npm run build      # Build de producción (incluye prebuild con set-env.mjs)
 ```
+## Link de la demo
+- https://g3-angular.vercel.app/
