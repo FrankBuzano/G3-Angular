@@ -1,10 +1,11 @@
 .layout {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: var(--space-lg);
+  max-width: var(--layout-max);
+  margin-inline: auto;
+  padding: var(--space-page);
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
+  container: layout / inline-size;
 }
 
 .app-header {
@@ -12,22 +13,28 @@
 }
 
 .app-title {
-  font-size: 1.75rem;
+  font-size: var(--font-size-title);
   font-weight: 700;
   color: var(--color-primary);
   letter-spacing: -0.02em;
 }
 
 .content-row {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: var(--columns-main);
   gap: var(--space-lg);
+  align-items: start;
 }
 
-@media (min-width: 768px) {
+@container layout (width <= 32rem) {
   .content-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (orientation: landscape) and (height <= 30rem) {
+  .layout {
+    padding-block: var(--space-sm);
+    gap: var(--space-md);
   }
 }

@@ -8,11 +8,24 @@
   border-radius: var(--radius-md);
   cursor: pointer;
   font-size: 0.9rem;
-  font-family: var(--font-main);
   transition: background 0.15s, color 0.15s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .history-btn:hover {
   background: color-mix(in srgb, var(--color-primary) 20%, var(--color-surface-muted));
   color: var(--color-primary);
+}
+
+.history-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+@media (any-pointer: coarse) {
+  .history-btn {
+    min-height: 44px;
+  }
 }
