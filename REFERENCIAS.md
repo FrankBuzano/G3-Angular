@@ -39,3 +39,6 @@
 8. **MDN Web Docs — Window.localStorage**
    https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
    Referencia de la API de localStorage utilizada para persistir el historial de búsquedas (`g3-clima:history:v1`).
+9. **Angular Fundamentals--FrontendMasters**
+   https://frontendmasters.com/courses/angular-fundamentals/
+
